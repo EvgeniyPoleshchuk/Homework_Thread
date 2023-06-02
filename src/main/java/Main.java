@@ -30,8 +30,6 @@ public class Main {
                     }
                 }
                 System.out.println(text.substring(0, 100) + " -> " + maxSize);
-                long endTs = System.currentTimeMillis(); // end time
-                System.out.println("Time: " + (endTs - startTs) + "ms");
             };
             Thread thread = new Thread(logic);
             thread.start();
@@ -39,7 +37,10 @@ public class Main {
         }
         for (Thread thread : threads) {
             thread.join(); // зависаем, ждём когда поток объект которого лежит в thread завершится
+            System.out.println("Поток завершен : " + thread.getName());
         }
+        long endTs = System.currentTimeMillis(); // end time
+        System.out.println("Time: " + (endTs - startTs) + "ms");
     }
 
     public static String generateText(String letters, int length) {
