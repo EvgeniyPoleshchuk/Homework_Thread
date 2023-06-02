@@ -44,7 +44,7 @@ public class Main {
           }
         }
         System.out.println("Максимальноe значение : " + max);
-
+        threadPool.shutdown();
         long endTs = System.currentTimeMillis(); // end time
         System.out.println("Time: " + (endTs - startTs) + "ms");
     }
