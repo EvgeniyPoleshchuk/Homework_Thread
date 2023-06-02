@@ -36,8 +36,8 @@ public class Main {
             threads.add(thread);
         }
         for (Thread thread : threads) {
-            thread.join(); // зависаем, ждём когда поток объект которого лежит в thread завершится
-            System.out.println("Поток завершен : " + thread.getName());
+            thread.join();
+            System.out.println("РџРѕС‚РѕРє Р·Р°РІРµСЂС€РµРЅ : " + thread.getName());
         }
         long endTs = System.currentTimeMillis(); // end time
         System.out.println("Time: " + (endTs - startTs) + "ms");
