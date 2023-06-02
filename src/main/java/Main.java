@@ -43,7 +43,7 @@ public class Main {
               max = future.get();
           }
         }
-        System.out.println("Максимальноe значение : " + max);
+        System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ : " + max);
         threadPool.shutdown();
         long endTs = System.currentTimeMillis(); // end time
         System.out.println("Time: " + (endTs - startTs) + "ms");
